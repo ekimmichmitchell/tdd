@@ -71,4 +71,20 @@ public class StringCalcTest {
         assertEquals(-1, sum);
 
     }
+
+    @org.junit.jupiter.api.Test
+    void addTestFour() throws Exception {
+
+        int sum = StringCalc.add("1,-2, 17,-5");
+        assertEquals(11, sum);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void addTestTen() throws Exception {
+
+        int sum = StringCalc.add("1,2,3,4,5,6,7,8,9,-45");
+        assertEquals(0, sum);
+
+    }
 }
