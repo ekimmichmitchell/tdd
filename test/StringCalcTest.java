@@ -32,11 +32,35 @@ public class StringCalcTest {
     }
 
 
-    @org.junit.jupiter.api.Test
-    void addTestTooMany() throws Exception{
+//    @org.junit.jupiter.api.Test
+//    void addTestTooMany() throws Exception{
+//
+//        Throwable exception = assertThrows(Exception.class, ()-> StringCalc.add("1,2") );
+//
+//    }
 
-        Throwable exception = assertThrows(Exception.class, ()-> StringCalc.add("1,2") );
+
+    @org.junit.jupiter.api.Test
+    void addTestTwoPos() throws Exception {
+
+        int sum = StringCalc.add("1,2");
+        assertEquals(3, sum);
 
     }
 
+    @org.junit.jupiter.api.Test
+    void addTestTwoNeg() throws Exception {
+
+        int sum = StringCalc.add("-1,-2");
+        assertEquals(-3, sum);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void addTestOnePosOneNeg() throws Exception {
+
+        int sum = StringCalc.add("-1,2");
+        assertEquals(1, sum);
+
+    }
 }
