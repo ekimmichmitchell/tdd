@@ -57,10 +57,18 @@ public class StringCalcTest {
     }
 
     @org.junit.jupiter.api.Test
-    void addTestOnePosOneNeg() throws Exception {
+    void addTestTwoPosNeg() throws Exception {
 
         int sum = StringCalc.add("-1,2");
         assertEquals(1, sum);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void addTestTwoNegPos() throws Exception {
+
+        int sum = StringCalc.add("1,-2");
+        assertEquals(-1, sum);
 
     }
 }
