@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class StringCalcTest {
 
     @org.junit.jupiter.api.Test
-    void addTestZero(){
+    void addTestZero() throws Exception {
 
         int sum = StringCalc.add("");
         assertEquals(0, sum);
@@ -16,7 +16,7 @@ public class StringCalcTest {
 
 
     @org.junit.jupiter.api.Test
-    void addTestOnePos(){
+    void addTestOnePos() throws Exception {
 
         int sum = StringCalc.add("12");
         assertEquals(12, sum);
@@ -24,7 +24,7 @@ public class StringCalcTest {
     }
 
     @org.junit.jupiter.api.Test
-    void addTestOneNeg(){
+    void addTestOneNeg() throws Exception {
 
         int sum = StringCalc.add("-2");
         assertEquals(-2, sum);
@@ -33,7 +33,8 @@ public class StringCalcTest {
 
 
     @org.junit.jupiter.api.Test
-    void addTestTooMany(){
+    void addTestTooMany() throws Exception{
+
         Throwable exception = assertThrows(Exception.class, ()-> StringCalc.add("1,2") );
 
     }
