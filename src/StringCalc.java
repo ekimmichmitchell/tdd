@@ -10,26 +10,16 @@ public class StringCalc {
             return 0;
         }else{
 
-            try {
+            List<String> stringList = Arrays.asList(numbers.split(","));
 
-                List<String> stringList = Arrays.asList(numbers.split(","));
+            int sum =0;
 
-                int sum =0;
+            for(String num: stringList){
+                int number = Integer.parseInt(num);
 
-                for(String num: stringList){
-                    int number = Integer.parseInt(num);
-
-                    sum += number;
-                }
-
-
-                return sum;
-
-            }catch (Exception e){
-                throw new Exception("too many arguments");
+                sum += number;
             }
-
+            return sum;
         }
-
     }
 }
