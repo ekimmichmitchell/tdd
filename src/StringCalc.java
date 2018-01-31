@@ -11,9 +11,19 @@ public class StringCalc {
         }else{
 
             try {
-                int number = Integer.parseInt(numbers);
 
-                return number;
+                List<String> stringList = Arrays.asList(numbers.split(","));
+
+                int sum =0;
+
+                for(String num: stringList){
+                    int number = Integer.parseInt(num);
+
+                    sum += number;
+                }
+
+
+                return sum;
 
             }catch (Exception e){
                 throw new Exception("too many arguments");
