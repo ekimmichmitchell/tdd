@@ -9,9 +9,7 @@ public class StringCalc {
         if(numbers.equals("") ){
             return 0;
         }else{
-
             return -1;
-
         }
 
     }
