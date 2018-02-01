@@ -8,16 +8,20 @@ public class StringCalc {
 
         if(numbers.equals("") ){
             return 0;
-        }else{
+        }
+        else{
 
             List<String> stringList = Arrays.asList(numbers.split(","));
 
             int sum =0;
+            int size = stringList.size();
+            int count = 0;
 
             for(String num: stringList){
-                int number = Integer.parseInt(num);
-
-                sum += number;
+                if(Character.isDigit(num.charAt(count))) {
+                    int number = Integer.parseInt(num);
+                    sum += number;
+                }
             }
             return sum;
         }

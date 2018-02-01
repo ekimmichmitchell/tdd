@@ -2,6 +2,8 @@
  * Created by Mia Kimmich Mitchell on 1/26/2018.
  */
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StringCalcTest {
@@ -85,6 +87,14 @@ public class StringCalcTest {
 
         int sum = StringCalc.add("1,2,3,4,5,6,7,8,9,-45");
         assertEquals(0, sum);
+
+    }
+
+    @Test
+    void addTestNonNumeric()throws Exception{
+
+        int sum = StringCalc.add("a,b,2,5");
+        assertEquals(7,sum);
 
     }
 }
