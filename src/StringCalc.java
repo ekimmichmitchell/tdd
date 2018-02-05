@@ -8,6 +8,7 @@ public class StringCalc {
 
         if(numbers.equals("") ){
             return 0;
+    // adding comment to Line 11 on string calc - DMF
         }
         else{
 
